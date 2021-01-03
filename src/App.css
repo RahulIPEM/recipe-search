@@ -1,10 +1,10 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+body{
+  background-color: #282c34;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -15,7 +15,6 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +34,65 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Custom CSS */
+input, select{
+  box-sizing: border-box;
+  height: 40px;
+  vertical-align: top;
+  margin: 10px;
+  overflow: auto;
+}
+/* input[type=text]:focus, select:focus {
+  outline: none;
+} */
+.side-content{
+  width: 25%;
+  float: left;
+}
+.main-content{
+  width: 75%;
+  float: right;
+}
+.search-title> p{
+  text-align: center;
+  padding-left: 0;
+}
+.side-content, .main-content{
+  display: inline-block;
+}
+.side-content>h3,p{
+  padding-left: 80px;
+  color: #dddddd;
+}
+.search-bar-input{
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  border-style: hidden;
+}
+
+.recipe-outer-card{
+  width: calc(100% / 3);
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.recipe-card{
+  width: 80%;
+  margin: 0 auto;
+  background: #dddddd;
+  box-shadow: 0 0 3px #4f545e;
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 10px;
+  overflow: hidden;
+  height: 500px;
+  overflow-y: scroll;
+  scrollbar-width: 0;
+}
+.recipe-card:hover{
+  box-shadow: 0 3px 3px #4f545e;
+}
+.recipe-card > img{
+  width: 100%;
 }
