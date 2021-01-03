@@ -1,11 +1,14 @@
 import React from 'react';
+import Ingredient from './Ingredient';
+import Nutrient from './Nutrient';
 
 export default function RecipeCard({
   image,
   label,
   url,
   source,
-  ingredientLines,
+  totalNutrients,
+  ingredients,
 }) {
   return (
     <>
@@ -16,10 +19,20 @@ export default function RecipeCard({
           <a href={url} target="_blank" rel="noreferrer">
             See full recipe at: {source}
           </a>
-          <h4>{ingredientLines.length} Ingredients</h4>
-          {ingredientLines.map((ingredient, index) => {
-            return <span key={index}>{ingredient}</span>;
-          })}
+          <div style={{ overflow: 'auto' }}>
+            <h4>{ingredients.length} Ingredients</h4>
+            {ingredients.map((ingredient, index) => {
+              return <Ingredient key={index} {...ingredient} />;
+            })}
+          </div>
+          <div>
+            <h4>Nutrients</h4>
+            {totalNutrients
+              ? Object.values(totalNutrients).map((nutrient, index) => {
+                  return <Nutrient key={index} {...nutrient} />;
+                })
+              : null}
+          </div>
         </div>
       </div>
     </>

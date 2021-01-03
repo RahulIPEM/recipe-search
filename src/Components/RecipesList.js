@@ -14,8 +14,6 @@ export default function RecipesList({ searchText, recipesData }) {
       </div>
       {hits ? (
         hits.map((hit, index) => {
-          //   const { image, label, url, source, ingredientLines } = hit.recipe;
-
           return <RecipeCard key={index} {...hit.recipe} />;
         })
       ) : (

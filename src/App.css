@@ -96,3 +96,21 @@ input, select{
 .recipe-card > img{
   width: 100%;
 }
+.ingredient-name{
+  width: 59%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+  margin: 0;
+}
+.ingredient-pills{
+  float: right
+}
+.ingredient-name,
+.ingredient-pills{
+  color: #333333;
+  padding: 0;
+  display: inline-block;
+  text-overflow: ellipsis;
+}
